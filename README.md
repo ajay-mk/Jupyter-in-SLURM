@@ -49,6 +49,7 @@ jupyter-lab --no-browser --port=$PORT --ip=0.0.0.0
 - Once you execute the `run_jupyter.sh`, it will output the ssh command and the url to JupyterLab.
 - Copy and paste the ssh command to a local terminal.
 - Copy and paste the link to your browser.
+
 If this was helpful to you, I would appreciate a tweet. Raise an issue if you find a bug, or submit a PR.
 
 -Ajay
