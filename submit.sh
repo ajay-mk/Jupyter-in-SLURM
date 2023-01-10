@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Written by Ajay Melekamburath (https://github.com/ajay-mk)
+# See README.md before making changes
+
 # SLURM Options - Make necessary chanages according to available resources and QOS settings of the cluster
 
 #SBATCH --job-name=Notebook
@@ -33,4 +36,4 @@ jupyter-lab --no-browser --port=$PORT --ip=0.0.0.0
 
 wait
 
-# By Ajay (https://github.com/ajay-mk)
+# EOF

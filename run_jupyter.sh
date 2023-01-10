@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Written by Ajay Melekamburath (https://github.com/ajay-mk)
+# See README.md before making changes
+
 # Submitting the bash file
 jobid=$(sbatch --parsable submit.sh)
 echo "Submitting the job file"
@@ -25,5 +28,4 @@ while true ; do
     sleep 2s
 done
 
-
-# By Ajay (https://github.com/ajay-mk)
+# EOF
