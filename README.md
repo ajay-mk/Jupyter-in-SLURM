@@ -1,9 +1,7 @@
 
 # Jupyter in SLURM
 
-JupyterLab and Jupyter Notebook are very useful tools for data scientists. If the workload is high, and you want to run your calculations in compute nodes of a HPC cluster, this script may be useful.
-
-This bash scripts will help you run Jupyter Notebook or JupyterLab in compute nodes of HPC clusters with SLURM.
+These bash scripts will help you run Jupyter Notebook or JupyterLab in compute nodes of HPC clusters with SLURM workload manager.
 
 Execute the `run_jupyter.sh` file after making necessary changes in `submit.sh`. 
 
