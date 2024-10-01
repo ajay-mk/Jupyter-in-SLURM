@@ -3,7 +3,7 @@
 
 These bash scripts will help you run Jupyter Notebook or JupyterLab in compute nodes of HPC clusters with SLURM workload manager.
 
-Execute the `run_jupyter.sh` file after making necessary changes in `submit.sh`. 
+Execute the `run_jupyter.sh` file after making the necessary changes in `submit.sh`. 
 
 Find the detailed instructions below.
 
@@ -12,7 +12,7 @@ Find the detailed instructions below.
 
 ### submit.sh
 
-- `submit.sh` is the slurm job file, you can change the SLURM options by editing the following section.
+- `submit.sh` is the SLURM job file, you can change the SLURM options by editing the following section.
 ```bash
 #SBATCH --job-name=Notebook
 #SBATCH --nodes=1
@@ -22,7 +22,7 @@ Find the detailed instructions below.
 #SBATCH --output=Jupyter-%j.out
 ```
 - Changing the name of the output file is not recommended, if you do so, make necessary changes in the `run_jupyter.sh` file.
-- Load the necessary modules. By default the script will try to load anaconda, you can change this and activate conda environments if needed.
+- Load the necessary modules. By default, the script will try to load Anaconda; you can change this and activate conda environments if needed.
 ```bash
 module load anaconda 
 conda activate env_name
@@ -33,9 +33,9 @@ PUB_ADDRESS=192.168.100.100
 ```
 OR
 ```bash
-PUB_ADDRESS=login_node@cluster.univ.edu
+PUB_ADDRESS=login_node.cluster.univ.edu
 ```
-- By default the code runs JupyterLab. If you want to run Notebook, make changes in the following section.
+- By default, the code runs JupyterLab. If you want to run Notebook, make changes in the following section.
 ```bash
 jupyter-lab --no-browser --port=$PORT --ip=0.0.0.0
 #jupyter-notebook --no-browser --port=$PORT --ip=0.0.0.0
@@ -43,11 +43,9 @@ jupyter-lab --no-browser --port=$PORT --ip=0.0.0.0
 
 ### run_jupyter.sh
 
-- `run_jupyter.sh` will submit the slurm job file, and output the code strings needed to run Jupyter.
-- Once you execute the `run_jupyter.sh`, it will output the ssh command and the url to JupyterLab.
+- `run_jupyter.sh` will submit the SLURM job file and output the code strings needed to run Jupyter.
+- Once you execute the `run_jupyter.sh`, it will output the `ssh` command and the URL to JupyterLab.
 - Copy and paste the ssh command to a local terminal.
 - Copy and paste the link to your browser.
 
-If this was helpful to you, I would appreciate a tweet. Contact me or raise an issue if you find a bug, or submit a PR.
-
--Ajay
+Please open an issue if you run into any problems.
